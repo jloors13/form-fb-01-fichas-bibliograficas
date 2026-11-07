@@ -1,0 +1,86 @@
+\documentclass[11pt,a4paper]{article}
+
+% Datos de la actividad
+\newcommand{\codigoactividad}{FORM-FB-01}
+\newcommand{\nombreactividad}{Fichas bibliográficas: fundamentos de sistemas distribuidos y arquitecturas distribuidas}
+\newcommand{\integrantes}{Castro Coello Mario Sebastián \\ Loor Suárez Jordan Josué \\ Mendoza Villarroel Elian Jossue}
+\newcommand{\repositorio}{https://github.com/jloors13/form-fb-01-fichas-bibliograficas}
+\newcommand{\fechaentrega}{7 de noviembre de 2026}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\setlist[description]{style=nextline}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=ieee,maxcitenames=6,mincitenames=1]{biblatex}
+\addbibresource{bib/castro.bib}
+\addbibresource{bib/loor.bib}
+\addbibresource{bib/mendoza.bib}
+\usepackage[hidelinks]{hyperref}
+
+% Permite cortar URL largas en la bibliografía (evita desbordes)
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setcounter{biburllcpenalty}{100}
+
+\hypersetup{pdftitle={\codigoactividad: \nombreactividad}}
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  {\large\bfseries UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO\par}
+  \vspace{0.3cm}
+  {Facultad de Ciencias de la Computación\par}
+  {Carrera de Software\par}
+  \vspace{2.5cm}
+  {\large Aplicaciones Distribuidas (ISR-701)\par}
+  \vspace{1.5cm}
+  {\Large\bfseries \codigoactividad\par}
+  \vspace{0.4cm}
+  {\LARGE \nombreactividad\par}
+  \vfill
+  \begin{tabular}{@{}rl@{}}
+    \textbf{Grupo:}            & CLM \\
+    \textbf{Integrantes:}      & \begin{tabular}[t]{@{}l@{}}\integrantes\end{tabular} \\[2pt]
+    \textbf{Docente:}          & Gleiston Cicerón Guerrero Ulloa, PhD \\
+    \textbf{Nivel / paralelo:} & Séptimo nivel / B \\
+    \textbf{Periodo:}          & SPA 2026--2027 \\
+    \textbf{Fecha:}            & \fechaentrega \\
+  \end{tabular}
+  \par\vspace{1cm}
+  {\small Repositorio: \url{\repositorio}\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Fichas de Castro Coello Mario Sebastián}
+\input{fichas/castro}
+
+\section{Fichas de Loor Suárez Jordan Josué}
+\input{fichas/loor}
+
+\section{Fichas de Mendoza Villarroel Elian Jossue}
+\input{fichas/mendoza}
+
+\section{Declaración de uso de inteligencia artificial}
+
+\subsection{Castro Coello Mario Sebastián}
+\noindent\input{declaracion-ia/castro}
+
+\subsection{Loor Suárez Jordan Josué}
+\noindent\input{declaracion-ia/loor}
+
+\subsection{Mendoza Villarroel Elian Jossue}
+\noindent\input{declaracion-ia/mendoza}
+
+\printbibliography[heading=bibintoc,title={Referencias}]
+
+\end{document}
