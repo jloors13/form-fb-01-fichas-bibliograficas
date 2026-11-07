@@ -1,44 +1,44 @@
 \subsection{Ficha 1}
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+  \item[Referencia (IEEE):] \fullcite{Velepucha2023}
+  \item[DOI o ISBN verificado:] \url{https://doi.org/10.1109/ACCESS.2023.3305687} (verificado el 05/11/2026)
+  \item[Resumen:] El artículo parte de un vacío: hay bastante trabajo sobre cómo migrar monolitos a microservicios, pero poco sobre los principios que deberían guiar ese diseño. Los autores, de la Escuela Politécnica Nacional, hacen una revisión de literatura. Repasan principios de la orientación a objetos, como el encapsulamiento y el ocultamiento de información, y los relacionan con ambas arquitecturas. Presentan una lista de patrones usados en microservicios y comparan cómo Martin Fowler y Sam Newman proponen descomponer un sistema. Relacionan esas propuestas con el trabajo de David Parnas sobre modularidad. Cierran con ventajas, desventajas y tendencias actuales de cada una.
+  \item[Dato concreto:] Los autores parten de que hay un vacío en el conocimiento sobre los principios que se deben adoptar al implementar microservicios, aunque sí existen trabajos sobre el proceso de migración. También recogen la idea de Parnas de que modularizar un sistema mejora su flexibilidad y lo hace más fácil de entender (Abstract, p. 88339).
+  \item[Nota personal:] Me ayuda a pensar los límites de un servicio igual que los de un módulo: cada uno debe esconder una decisión de diseño. La usaré en TA-IND-01, en el análisis de la arquitectura de Discord, para evaluar cómo reparte responsabilidades. Un caso concreto: Discord puso servicios de datos en Rust entre su API y ScyllaDB, sin lógica de negocio, que se encargan de agrupar consultas repetidas a la misma fila. La API no necesita saber cómo se hace esa agrupación, y eso se puede analizar como ocultamiento de información en el sentido de Parnas.
 \end{description}
 
 \subsection{Ficha 2}
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+  \item[Referencia (IEEE):] \fullcite{Ferreira2025}
+  \item[DOI o ISBN verificado:] \url{https://doi.org/10.1109/ACCESS.2025.3558923} (verificado el 05/11/2026)
+  \item[Resumen:] El artículo estudia cuánto cuesta la consistencia fuerte en bases de datos NoSQL replicadas en varias regiones de la nube. Mantener todos los nodos con el dato más reciente choca con la disponibilidad y el rendimiento. Los autores probaron Cassandra, MongoDB y Redis, que usan modelos de datos distintos: columnas anchas, documentos y clave-valor. Usaron YCSB para generar cargas de trabajo estándar y compararon configuraciones de consistencia débil y fuerte. Para la fuerte, en MongoDB combinaron linearizable con w:n, y en Redis usaron el comando WAIT. Los resultados muestran caídas grandes de rendimiento con consistencia fuerte en Cassandra y Redis.
+  \item[Dato concreto:] En Cassandra, las operaciones de lectura y escritura por segundo bajaron hasta 95~\% en algunas cargas de trabajo. En Redis, la consistencia fuerte hizo las operaciones más de 20 veces más lentas (Abstract, p. 63428).
+  \item[Nota personal:] El artículo mide el mismo intercambio que Discord tuvo que resolver con sus mensajes. Discord pasó sus mensajes de MongoDB a Cassandra antes de 2017 y luego los migró a ScyllaDB, que es compatible con Cassandra, pasando de 177 a 72 nodos. Lee y escribe con nivel de consistencia quorum, y su propio equipo cuenta que, por eso, una partición caliente subía la latencia de todas las consultas a esos nodos. La usaré en TA-IND-01, en el análisis del almacenamiento y la consistencia de datos, para respaldar con cifras que la consistencia elegida tiene un costo de rendimiento medible.
 \end{description}
 
 \subsection{Ficha 3}
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+  \item[Referencia (IEEE):] \fullcite{Rehman2022}
+  \item[DOI o ISBN verificado:] \url{https://doi.org/10.1109/ACCESS.2022.3182211} (verificado el 05/11/2026)
+  \item[Resumen:] El artículo revisa cómo mantener servicios disponibles y confiables en la nube cuando fallan el hardware, el software o la red. Es una revisión de más de 100 estudios. Primero explica la nube y sus modelos de servicio y de despliegue. Luego distingue falla, error y fallo, clasifica los tipos de falla y presenta métricas como MTTF, MTTR, MTBF y disponibilidad. Después separa las técnicas reactivas, como checkpoint, replicación y reintento, de las proactivas, como self-healing, rejuvenecimiento de software y migración preventiva. Concluye que combinar los dos enfoques da mejores resultados, aunque lo proactivo agrega costo de monitoreo.
+  \item[Dato concreto:] El artículo menciona la meta de disponibilidad \enquote{Five 9's} (es decir, 99,999~\%), que permite 5 min y 15 segundos de caída al año (Sección IV.B, \enquote{Needs and Applications for Fault-Tolerance Computing}, p. 63427). Las definiciones de MTTF, MTTR y MTBF están en la Sección IV.C, p. 63428.
+  \item[Nota personal:] Me da un vocabulario preciso: separa falla, error y fallo, y divide las técnicas en reactivas y proactivas. La usaré en TA-IND-01, en el análisis de tolerancia a fallos, para clasificar los mecanismos de Discord con esas categorías. Por ejemplo, Discord replica cada partición de mensajes en tres nodos, y el artículo ubica la replicación entre las técnicas reactivas. Las métricas de disponibilidad me sirven para describir los requisitos que Discord se puso al elegir base de datos, como el failover automático.
 \end{description}
 
 \subsection{Ficha 4}
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+  \item[Referencia (IEEE):] \fullcite{Cazzola2022}
+  \item[DOI o ISBN verificado:] \url{https://doi.org/10.1007/s00446-022-00429-7} (verificado el 05/11/2026)
+  \item[Resumen:] El artículo parte de un problema en sistemas Erlang: los fallos de rendimiento suelen aparecer recién en producción. Las herramientas de carga miden el sistema desde afuera y las de monitoreo no generan una carga repetible. Los autores proponen PerformERL, un framework que junta ambas cosas. Inyecta tres agentes en cada nodo: uno cuenta llamadas y tiempos, otro descubre los procesos involucrados y otro recoge memoria y reducciones. El usuario define la carga en un módulo de prueba y recibe un reporte HTML. Lo evaluaron midiendo memoria y overhead, y comparándolo con eprof, fprof y Wombat sobre el servidor cowboy.
+  \item[Dato concreto:] Sobre el servidor HTTP cowboy, PerformERL hizo las respuestas unas 6 veces más lentas al inicio y se estabilizó cerca de 2 veces bajo carga. Con eprof la ralentización fue de 1,4 veces y con fprof de 5 veces (Sección 5.3, \enquote{PerformERL in the real world}, Fig. 6). Los tres agentes se definen en las Secciones 3.3, 3.4 y 3.5.
+  \item[Nota personal:] Discord corre sobre la máquina virtual de Erlang: su sistema en tiempo real está escrito en Elixir, y cada sesión de usuario y cada servidor (guild) es un proceso. El artículo me ayuda a entender qué se puede medir dentro de ese tipo de sistema: tiempo de llamadas, memoria y cola de mensajes por proceso. La usaré en TA-IND-01, en el análisis de rendimiento de la capa en tiempo real, para explicar el problema que Discord reportó en servidores con hasta 30 000 usuarios concurrentes: los procesos de guild no alcanzaban a vaciar sus colas de mensajes en horas pico. No voy a ejecutar PerformERL. Lo uso para explicar qué métricas internas dejan ver ese cuello de botella.
 \end{description}
 
 \subsection{Ficha 5}
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+  \item[Referencia (IEEE):] \fullcite{Blinowski2022}
+  \item[DOI o ISBN verificado:] \url{https://doi.org/10.1109/ACCESS.2022.3152803} (verificado el 05/11/2026)
+  \item[Resumen:] El artículo cuestiona si migrar a microservicios conviene en sistemas pequeños, sin miles de usuarios concurrentes, porque la evidencia viene sobre todo de Netflix o Amazon. Los autores construyeron una aplicación con dos servicios REST, uno liviano y otro de cálculo intensivo, en cuatro versiones: monolito y microservicios, en Java y en C\# .NET. Midieron el throughput con JMeter en un PC con Windows 10 Enterprise, Azure Spring Cloud y Azure App Service. En una sola máquina el monolito rindió más. En la nube, escalar verticalmente fue más rentable, y pasar de cierto número de instancias empeoró el rendimiento.
+  \item[Dato concreto:] En la máquina local, el monolito en .NET atendió en promedio más del doble de solicitudes que su versión en microservicios en el servicio City (Sección V.A, \enquote{Local Environment}, pp. 20364–20365). En Azure App Service, el throughput del servicio Route bajó al subir a 20 instancias (Sección V.C, \enquote{Azure App Service Environment}, p. 20368).
+  \item[Nota personal:] El estudio se limita a sistemas sin miles de usuarios concurrentes que pueden escalar verticalmente. Discord está en el caso opuesto: en 2017 ya tenía cerca de cinco millones de usuarios concurrentes, así que la conclusión a favor del monolito no se le aplica. Lo que sí me sirve es el otro hallazgo: escalar horizontalmente tiene un límite, porque el balanceo de carga agrega su propio costo. La usaré en TA-IND-01, en el análisis de escalabilidad, para explicar por qué Discord necesita escalar horizontalmente y por qué eso tiene un precio. También me sirve para un matiz: el equipo de Discord llama \enquote{API monolith} a su API, así que el sistema no está dividido en microservicios por completo.
 \end{description}

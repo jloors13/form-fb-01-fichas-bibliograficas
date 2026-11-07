@@ -2,5 +2,14 @@
   \toprule
   \textbf{Herramienta} & \textbf{Versión} & \textbf{Para qué se usó} & \textbf{Cómo se verificó lo obtenido} \\
   \midrule
+  Claude Code & Claude Opus 5.5 & Buscar fuentes candidatas en OpenAlex, comprobar sus datos en doi.org y consultar el cuartil de cada revista en SJR. & Abrí cada DOI, descargué el artículo y comparé autores, título, revista, volumen y páginas con la ficha. Elegí las cinco fuentes y reemplacé una de las propuestas. \\
+  \addlinespace
+  Claude Code & Claude Opus 5.5 & Agregar mis referencias al \texttt{.bib} con el script \texttt{doi2bib.ps1}, que descarga los datos oficiales de doi.org. & El script \texttt{verificar-\allowbreak referencias.ps1} confirmó que las cinco coinciden con doi.org, y las comparé con cada artículo. \\
+  \addlinespace
+  Claude Code & Claude Opus 5.5 & Armar la estructura base del repositorio grupal (un archivo de fichas, uno de referencias y uno de declaración por integrante) y crear las ramas de cada integrante. & Revisé la estructura con el grupo, compilé el documento y comprobé las ramas en GitHub. \\
+  \addlinespace
+  Claude Code & Claude Opus 5.5 & Revisar mis resúmenes, datos concretos y notas personales contra los artículos (número de palabras, páginas y secciones) y señalar imprecisiones. & Corregí yo cada punto señalado y volví a revisar los datos en cada artículo. \\
+  \addlinespace
+  Claude Code & Claude Opus 5.5 & Corregir el formato en LaTeX: que las referencias muestren todos los autores, que los enlaces no se salgan del margen, escapar caracteres especiales (\texttt{\#}, \texttt{\%}), cambiar comillas y quitar marcas de cita que no tenían referencia. & Compilé el documento, revisé que no hubiera desbordes ni citas sin resolver y que el texto de cada ficha se viera completo en el PDF. \\
   \bottomrule
 \end{tabularx}
