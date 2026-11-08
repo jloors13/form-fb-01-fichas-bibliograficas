@@ -1,44 +1,127 @@
-\subsection{Ficha 1}
+
+
+\subsection{Ficha 1: Seguridad en microservicios}
+
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+
+\item[Referencia (IEEE):]
+\fullcite{jayalath2024}
+
+\item[DOI o ISBN verificado:]
+\url{https://doi.org/10.1109/ACCESS.2024.3481374}
+
+\item[Resumen:]
+Este artículo aborda los problemas de seguridad que se pueden presentar en las arquitecturas de microservicios, particularmente por la comunicación entre servicios y dependencias que existen entre sus componentes. Para analizar esta situación, los autores realizaron una revisión de 62 estudios académicos mediante la cual identificaron 126 vulnerabilidades y las organizaron en una clasificación. De igual manera, evaluaron cuatro aplicaciones de referencia utilizando tres herramientas de análisis de seguridad. Durante las pruebas detectaron 1667 vulnerabilidades. Los hallazgos destacan la importancia de utilizar diferentes herramientas de detección y mantener una supervisión continua para identificar riesgos y fortalecer la protección de los sistemas basados en microservicios.
+
+\item[Dato concreto:]
+Los investigadores detectaron 1667 vulnerabilidades durante el análisis de cuatro aplicaciones de microservicios utilizando tres herramientas de escaneo.
+
+Ubicación: sección V, página 155193.
+
+\item[Nota personal:]
+Esta investigación me permitió comprender que la arquitectura de microservicios puede presentar diferentes riesgos de seguridad debido a la comunicación y las dependencias entre sus componentes. En TA-IND-01 utilizaré estos conocimientos para analizar los posibles riesgos y las medidas de protección que deben considerarse en un sistema distribuido como WhatsApp.
+
 \end{description}
 
-\subsection{Ficha 2}
+
+
+\subsection{Ficha 2: Evolución de API en microservicios}
+
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+
+\item[Referencia (IEEE):]
+\fullcite{lercher2024}
+
+\item[DOI o ISBN verificado:]
+\url{https://doi.org/10.1016/j.jss.2024.112110}
+
+\item[Resumen:]
+El artículo estudia los desafíos que surgen cuando se modifican las interfaces API utilizadas por los microservicios para comunicarse entre sí. Estas modificaciones pueden generar incompatibilidades y afectar a otros servicios que dependen de ellas. Para abordar el problema, los autores realizaron 17 entrevistas semiestructuradas a desarrolladores, arquitectos y responsables de 11 empresas. Por medio del análisis de las entrevistas, identificaron seis estrategias y seis desafíos relacionados con la evolución de las API. Entre sus resultados destaca la importancia de mantener la compatibilidad con versiones anteriores, coordinar los cambios entre equipos y mejorar la comunicación para evitar errores e interrupciones.
+
+\item[Dato concreto:]
+En promedio, las API REST representaban el 66,8 \% de la comunicación total de las organizaciones participantes.
+
+Ubicación: página 3, sección 3.1.
+
+\item[Nota personal:]
+Esta investigación me permitió comprender que las modificaciones en las interfaces API pueden afectar la comunicación entre los servicios que dependen de ellas. En TA-IND-01 utilizaré estos conocimientos para analizar la importancia de la comunicación y la compatibilidad entre los componentes de un sistema distribuido como WhatsApp.
+
 \end{description}
 
-\subsection{Ficha 3}
+
+
+\subsection{Ficha 3: Mensajería descentralizada y protección de contenido privado}
+
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+
+\item[Referencia (IEEE):]
+\fullcite{franco2023}
+
+\item[DOI o ISBN verificado:]
+\url{https://doi.org/10.1016/j.future.2023.03.025}
+
+\item[Resumen:]
+En este artículo se investiga cómo se tiene que evitar que las personas compartan imágenes privadas de otras personas sin su autorización por medio de aplicaciones de mensajería. Los investigadores primero evaluaron diez plataformas para identificar las características de seguridad y privacidad que poseen, más adelante se diseñaron dos alternativas descentralizadas que facilitan reconocer imágenes mediante los valores hash guardados en los dispositivos de cada persona. Para comprobar su desempeño se realizaron simulaciones con diferentes cantidades de participantes y verificaron los tiempos de procesamiento y comunicación frente a una arquitectura centralizada.
+
+Los resultados mostraron ventajas en los tiempos de respuesta y en la distribución del procesamiento.
+
+\item[Dato concreto:]
+En las pruebas realizadas con 10.000 nodos, la arquitectura centralizada superó los 90 milisegundos de procesamiento por imagen, mientras que las alternativas descentralizadas necesitaron solamente unos pocos milisegundos en promedio.
+
+Ubicación: página 219, sección 7.5, Scalability Evaluation.
+
+\item[Nota personal:]
+La investigación permite comprender que las imágenes privadas son importantes de proteger, y de cómo distribuir el procesamiento entre los dispositivos se puede reducir la dependencia de un servidor central. En TA-IND-01 aplicaré estos conocimientos para analizar los mecanismos de privacidad y de la seguridad de WhatsApp, así también las limitaciones que puedan existir al compartir contenido entre las personas.
+
 \end{description}
 
-\subsection{Ficha 4}
+
+
+\subsection{Ficha 4: Reenvío de mensajes y difusión de contenido en WhatsApp}
+
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+
+\item[Referencia (IEEE):]
+\fullcite{melo2024}
+
+\item[DOI o ISBN verificado:]
+\url{https://doi.org/10.1609/icwsm.v18i1.31372}
+
+\item[Resumen:]
+El artículo analiza la difusión de mensajes a través de la opción para reenviar mensajes de WhatsApp y las complicaciones que presenta la plataforma para controlar la circulación de contenido viral. Para esta investigación los autores recopilaron cerca de 9.8 millones de mensajes de 1.101 grupos públicos de Brasil vinculados con discusiones políticas. A su vez, estudiaron los tipos de contenido compartido, las cadenas de reenvío y la identificación de archivos multimedia duplicados. Los resultados mostraron que los usuarios pueden evitar las restricciones de reenvío mediante métodos como copiar y volver a enviar los archivos. Además, encontraron que una parte importante del contenido viral no recibía la etiqueta de aviso correspondiente.
+
+\item[Dato concreto:]
+Los investigadores encontraron que 612.855 apariciones de contenido multimedia duplicado, equivalentes al 59\%, no recibieron la etiqueta ``Forwarded Many Times'' de WhatsApp.
+
+Ubicación: página 1061, apartado ``Discrepancy between forwards and duplicates''.
+
+\item[Nota personal:]
+Esta investigación me facilitó la comprensión de que las restricciones al reenvío de WhatsApp pueden presentar inconvenientes cuando las personas utilizan otras formas de compartir el mismo contenido. En TA-IND-01 utilizaré estos conocimientos para analizar cómo se distribuyen los mensajes dentro de WhatsApp y qué mecanismos utiliza la plataforma para controlar su propagación.
+
 \end{description}
 
-\subsection{Ficha 5}
+
+
+\subsection{Ficha 5: Comunicación y rendimiento en microservicios}
+
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+
+\item[Referencia (IEEE):]
+\fullcite{colarusso2024}
+
+\item[DOI o ISBN verificado:]
+\url{https://doi.org/10.1002/spe.3317}
+
+\item[Resumen:]
+El artículo investiga los inconvenientes que pueden surgir cuando los microservicios de una aplicación se comunican desde diferentes dispositivos, aumentando los tiempos de respuesta. Para estudiar este problema, los autores desarrollaron un sistema que recoge información sobre las comunicaciones entre los servicios y aplica estrategias de agrupamiento para establecer cuáles deberían ejecutarse juntos. La propuesta fue analizada con TrainTicket, que es una aplicación formada por 41 microservicios y 22 bases de datos, mediante pruebas en distintas condiciones de red. Los resultados mostraron que en una distribución apoyada en las relaciones entre servicios puede disminuir los tiempos de respuesta hasta un 61\%.
+
+\item[Dato concreto:]
+Los autores obtuvieron una reducción de hasta el 61\% en los tiempos de respuesta mediante estrategias de agrupamiento basadas en la localidad.
+
+Ubicación: página 1118, resumen del artículo.
+
+\item[Nota personal:]
+Esta investigación me permitió comprender que la ubicación de los microservicios y la comunicación entre sus componentes, puede incidir en el rendimiento de una aplicación. En TA-IND-01 usaré esta investigación para evaluar la importancia de la comunicación entre los componentes de WhatsApp y cómo la distribución de sus servicios puede influir en los tiempos de respuesta.
+
 \end{description}
+
