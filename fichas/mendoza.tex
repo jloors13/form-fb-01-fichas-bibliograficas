@@ -1,44 +1,49 @@
-\subsection{Ficha 1}
+\subsection{Ficha 1: Identificación de microservicios al descomponer un monolito}
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+  \item[Referencia (IEEE):] \fullcite{Oumoussa_2024}
+  \item[DOI o ISBN verificado:] \url{https://doi.org/10.1109/ACCESS.2024.3365079}
+  \item[Resumen:] El artículo aborda la transformación de sistemas monolíticos hacia arquitecturas de microservicios (MSA), que ofrece ventajas como escalabilidad, agilidad y adopción en la nube. Aun así, el éxito de esta depende de una correcta y eficiente identificación de los microservicios, área que permanece aún en desarrollo. Los autores realizaron una revisión sistemática de la literatura y seleccionaron 168 artículos para realizar este análisis. Estos hallazgos ponen de manifiesto la necesidad de herramientas más automatizadas y precisas, criterios estandarizados para su evaluación y mayor entendimiento de factores humanos.
+Las métricas de evaluación no se aplican de manera consistente en todos los estudios, es difícil comparar la efectividad de los métodos entre estudios.
+  \item[Dato concreto:] Los autores identificaron 5 objetivos de investigación en el campo de identificación de microservicios, y una variedad de métricas de evaluación, siendo las métricas de cohesión, IFN y LOC las más comunes. Ubicación: sección IV-B (Identificación, investigación y evaluación de microservicios), página 23393. 
+  \item[Nota personal:] Me ayuda a entender que la transformación de sistemas monolíticos a arquitecturas de microservicios es un proceso que presenta varias dificultades, y que depende críticamente de aplicar métricas de evaluación precisas (como cohesión y LOC) para separar correctamente los componentes. La usaré en TA-IND-01, en la sección Arquitectura del sistema, para fundamentar teóricamente cómo y con qué criterios está dividido Netflix.
 \end{description}
 
-\subsection{Ficha 2}
+\subsection{Ficha 2: Descomposición de monolitos en microservicios}
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+  \item[Referencia (IEEE):] \fullcite{Abgaz_2023}
+  \item[DOI o ISBN verificado:] \url{https://doi.org/10.1109/TSE.2023.3287297}
+  \item[Resumen:] Muchas empresas que utilizan sistemas complejos buscan soluciones para descomponer sus aplicaciones monolíticas en microservicios. Se examinaron 35 artículos de investigación mediante una revisión sistemática de la literatura. Los autores clasificaron los enfoques de descomposición según el tipo de dato en el que se basan: basados en modelos, en código, en registros y en versiones. Se observó una ausencia de una descripción del proceso de descomposición de extremo a extremo. Además, la descomposición de monolitos aún se encuentra en una etapa temprana, con falta de métodos y de herramientas de apoyo.
+  \item[Dato concreto:] Los autores concluyen que las fases principales del M2MDF son: recopilación de datos de entrada, análisis de monolitos, identificación de microservicios, optimización, evaluación e implementación de microservicios. Ubicación: sección VIII (Conclusión), página 4236.
+  \item[Nota personal:] Me ayuda a entender que hay varios enfoques para descomponer, no uno solo, y que aún faltan métodos y herramientas de apoyo.
+La usaré en TA-IND-01, en la sección Postura crítica, para argumentar sobre los desafíos técnicos que enfrentó la migración de Netflix a microservicios.
 \end{description}
 
-\subsection{Ficha 3}
+\subsection{Ficha 3: Prácticas de seguridad en sistemas de microservicios}
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+  \item[Referencia (IEEE):] \fullcite{Rezaei_Nasab_2023}
+  \item[DOI o ISBN verificado:] \url{https://doi.org/10.1016/j.jss.2022.111563}
+  \item[Resumen:] La seguridad en los sistemas de microservicios es un gran reto, principalmente por la brecha de conocimiento que existe entre los profesionales sobre cómo asegurarlos correctamente. Para ayudar con esto, el estudio extrajo información de repositorios y foros para proponer prácticas de seguridad en áreas clave como autorización, manejo de tokens y bases de datos. Como método de validación, en lugar de implementarlas en sistemas reales, realizaron una encuesta a 74 profesionales de la industria. Como resultado, los encuestados consideraron que estas prácticas eran útiles para su trabajo.
+  \item[Dato concreto:] El API Gateway para sistemas grandes (PA4) fue la práctica más aceptada: 70,27\% la consideró “absolutamente útil” y 25,68\% “útil”, o sea 95,95\% en total. Ubicación: tabla 3, sección 4.2.1. 
+  \item[Nota personal:] Me ayuda a entender que las prácticas de seguridad se organizan en varias categorías como autorización y tokens. La usaré en TA-IND-01, en la sección Postura crítica, para argumentar qué categorías debe cubrir Netflix.
 \end{description}
 
-\subsection{Ficha 4}
+\subsection{Ficha 4: Herramientas de monitoreo para DevOps y microservicios}
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+  \item[Referencia (IEEE):] \fullcite{Giamattei_2024}
+  \item[DOI o ISBN verificado:] \url{https://doi.org/10.1016/j.jss.2023.111906}
+  \item[Resumen:] El desarrollo y operación de los sistemas basados en microservicios es una situación compleja. El principal problema que aborda el artículo es la dificultad de seleccionar una herramienta de monitorización adecuada para sistemas de microservicios desarrollados bajo prácticas DevOps. Se empleó una revisión sistemática de literatura gris, con un proceso riguroso de búsqueda, selección y extracción de datos en repositorios como GitHub y motores de búsqueda, que llevó a 71 herramientas para analizar. Como resultado, los autores contrastaron los resultados y sintetizaron un mapa de las características de las herramientas analizadas, con sus ventajas y desventajas.
+  \item[Dato concreto:] La mayoría de las herramientas (58\%) están dirigidas a sistemas distribuidos de alto nivel, mientras que el resto, especialmente las más nuevas, se centran en tecnologías de servicios web (21\%) y en sistemas basados en microservicios (21\%). Ubicación: sección 8.1 (Principales hallazgos y orientaciones para ingenieros DevOps), página 13.
+  \item[Nota personal:] Me ayuda a entender que monitorear es la base para detectar fallos, y que el principal problema es la dificultad de seleccionar una herramienta adecuada.
+La usaré en TA-IND-01, en el apartado de tolerancia a fallos, para explicar cómo Netflix logra detectar que un nodo o servicio dejó de responder.
 \end{description}
 
-\subsection{Ficha 5}
+\subsection{Ficha 5: Visualización dinámica de arquitecturas de microservicios}
 \begin{description}
-  \item[Referencia (IEEE):]
-  \item[DOI o ISBN verificado:]
-  \item[Resumen:]
-  \item[Dato concreto:]
-  \item[Nota personal:]
+  \item[Referencia (IEEE):] \fullcite{Gortney_2022}
+  \item[DOI o ISBN verificado:] \url{https://doi.org/10.1109/ACCESS.2022.3221130}
+  \item[Resumen:] A medida que los microservicios van evolucionando y popularizándose, surgen diversos inconvenientes. Uno de estos es la falta de una visión completa del sistema, lo que impide visualizar la arquitectura de una forma integral. En este artículo se hizo un estudio de mapeo investigando el análisis dinámico para visualizar la arquitectura del sistema. Durante el proceso de revisión literaria probaron con 37 consultas de búsquedas diferentes.
+Los autores identificaron tres técnicas principales de análisis dinámico: minería de procesos, rastreo distribuido y monitorización, además encontraron herramientas para recopilar datos de tiempo de ejecución y crear visualización a partir de su análisis.
+  \item[Dato concreto:] Existen tres técnicas principales de análisis dinámico: minería de procesos, rastreo distribuido y monitorización. Ubicación: sección 9 (Conclusión), página 120011.
+  \item[Nota personal:] Me ayuda a entender que la arquitectura se puede ver mientras el sistema se ejecuta, con tres técnicas: minería de procesos, rastreo distribuido y monitorización.
+La usaré en TA-IND-01 en la sección 4 (Arquitectura del sistema) para explicar cómo interactúan los componentes de Netflix.
 \end{description}
