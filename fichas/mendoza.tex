@@ -5,7 +5,7 @@
   \item[Resumen:] El articulo aborda la transformación de sistemas monolíticos hacia arquitecturas de microservicios (MSA) ofrece ventajas como escalabilidad, agilidad y adopción en la nube. Aun así, el éxito de esta depende de una correcta y eficiente identificación de los microservicios, área que permanece aún en desarrollo. Para analizar esta problemática, los autores realizaron una revisión sistemática de la literatura seleccionaron 168 artículos para realizar este análisis. Estos hallazgos ponen de manifiesto la necesidad de herramientas más automatizadas y precisas, criterios estandarizados para su evaluación y mayor entendimiento de factores humanos que influyen en transiciones exitosas.
 Las métricas de evaluación no se aplican de manera consistente en todos los estudios, por lo tanto, es difícil comparar la efectividad de los métodos entre estudios.
   \item[Dato concreto:] Los autores identificaron 5 objetivos de investigación en el campo de identificación de microservicios, y una variedad de métricas de evaluación, siendo las métricas de cohesión, IFN y LOC las más comunes. Ubicación: sección IV-B (Identificación, investigación y evaluación de microservicios), página 23393. 
-  \item[Nota personal:] Me ayuda a entender que la transformación de sistemas monolíticos a arquitecturas de microservicios es un proceso que presenta varias dificultades, y que depende críticamente de aplicar métricas de evaluación precisas (como cohesión y LOC) para separar correctamente los componentes, y lo usaría para para explicar cómo está dividido el sistema que elijas en componentes o servicios, y con qué criterio se separó cada uno. La usare en TA-IND-01, en la Sección 4 (Arquitectura del sistema) para fundamentar teóricamente cómo y con qué criterios está dividido en servicios el sistema distribuido
+  \item[Nota personal:] Me ayuda a entender que la transformación de sistemas monolíticos a arquitecturas de microservicios es un proceso que presenta varias dificultades, y que depende críticamente de aplicar métricas de evaluación precisas (como cohesión y LOC) para separar correctamente los componentes, y lo usaría para para explicar cómo está dividido el sistema que elijas en componentes o servicios, y con qué criterio se separó cada uno. La usare en TA-IND-01, en la Sección 4 (Arquitectura del sistema) para fundamentar teóricamente cómo y con qué criterios está dividido Netflix, por ejemplo.
 \end{description}
 
 \subsection{Ficha 2: Descomposición de monolitos en microservicios}
@@ -15,8 +15,8 @@ Las métricas de evaluación no se aplican de manera consistente en todos los es
   \item[Resumen:] Muchas empresas que utilizan sistemas complejos buscan exhaustivamente soluciones para descomponer sus aplicaciones monolíticas en lo que son microservicios. Se examinaron 35 artículos de investigación mediante una revisión sistemática de Literatura. Los autores clasifican los enfoques de descomposición según el tipo de dato en el que se basan: basado en modelos, basado en código basado en registros y basado en versiones 
 Se observo una ausencia de una descripción del proceso de descomposición de extremo a extremo. Como hallazgo se observó que la descomposición de monolitos aún se encuentra en una etapa temprana, y la existencia de falta de métodos y de herramientas de apoyo.
   \item[Dato concreto:] Los autores concluyen que las fases principales del M2MDF son: recopilación de datos de entrada, análisis de monolitos, identificación de microservicios, optimización, evaluación e implementación de microservicios. Ubicación: sección VIII (Conclusión), página 4236.
-  \item[Nota personal:] Hay varios enfoques para descomponer, no uno solo, y que aún se encuentra con la existencia de falta de métodos y herramientas de apoyo. 
-La usare en TA-IND-01 Sección 9 (Postura crítica) para argumentar sobre los enormes desafíos técnicos que enfrentan los equipos de ingeniería al realizar esta compleja transición.
+  \item[Nota personal:] Me ayuda a entender que hay varios enfoques para descomponer, no uno solo, y que aún se encuentra con la existencia de falta de métodos y herramientas de apoyo. 
+La usare en TA-IND-01 Sección 9 (Postura crítica) para argumentar sobre los enormes desafíos técnicos que enfrento la migración de Netflix a microservicios.
 \end{description}
 
 \subsection{Ficha 3: Prácticas de seguridad en sistemas de microservicios}
@@ -37,10 +37,9 @@ La usare en TA-IND-01 Sección 9 (Postura crítica) para argumentar que la neces
   \item[Resumen:] El desarrollo y operación de los sistemas basados en microservicios es una situación compleja, el principal problema que aborda es la dificultad de seleccionar una herramienta de monitorización adecuada para sistemas de microservicios desarrollados bajo practicas DevOps.
 Se emplea una revisión sistemática de literatura gris, ejecutando un proceso riguroso de búsqueda, selección y extracción de datos en repositorios como GitHub y motores de búsqueda, lo que llevo a 71 herramientas para analizar.
 Como resultado de analizar esas 71, contrastaron los resultados y sintetizaron el mapa de las características emergentes de las herramientas analizadas, sus ventajas y desventajas y otras características más.
-  \item[Dato concreto:] La mayoría de las herramientas (58\%) están dirigidas a sistemas distribuidos de alto nivel, mientras que el resto, especialmente las más nuevas, se centran en tecnologías de servicios web (21\%) y en sistemas basados en microservicios (21\\%). Ubicación: sección 8.1 (Principales hallazgos y orientaciones para ingenieros DevOps), página 13.
+  \item[Dato concreto:] La mayoría de las herramientas (58\%) están dirigidas a sistemas distribuidos de alto nivel, mientras que el resto, especialmente las más nuevas, se centran en tecnologías de servicios web (21\%) y en sistemas basados en microservicios (21\%). Ubicación: sección 8.1 (Principales hallazgos y orientaciones para ingenieros DevOps), página 13.
   \item[Nota personal:] Me ayuda a entender que monitorear es la base para detectar fallos, y que el principal problema es la dificultad de seleccionar una herramienta adecuada.
-Lo usuaria en TA-IND-01 en el apartado de Tolerancia a Fallos para explicar cómo el sistema que escogí logra detectar que un nodo o servicio dejo de responder.
-
+Lo usuaria en TA-IND-01 en el apartado de Tolerancia a Fallos para explicar cómo el sistema que escogí, por ejemplo, Netflix logra detectar que un nodo o servicio dejo de responder.
 \end{description}
 
 \subsection{Ficha 5: Visualización dinámica de arquitecturas de microservicios}
@@ -50,6 +49,6 @@ Lo usuaria en TA-IND-01 en el apartado de Tolerancia a Fallos para explicar cóm
   \item[Resumen:] A medida que los microservicios van evolucionando y popularizándose, surgen diversos inconvenientes. Uno de estos es la falta de una visión completa del sistema, lo que impide visualizar la arquitectura de una forma integral. En este artículo se hizo un estudio de mapeo investigando el análisis dinámico para visualizar la arquitectura del sistema. Durante el proceso de revisión literaria probaron con 37 consultas de búsquedas diferentes.
 Los autores identificaron tres técnicas principales de análisis dinámico: minería de procesos, rastreo distribuido y monitorización, además encontraron herramientas para recopilar datos de tiempo de ejecución y crear visualización a partir de su análisis.
   \item[Dato concreto:] Existen tres técnicas principales de análisis dinámico: minería de procesos, rastreo distribuido y monitorización. Ubicación: sección 9(Conclusión), pagina 120011
-  \item[Nota personal:] Me ayuda a entender que ver la arquitectura de un sistema mientras se ejecuta, con tres técnicas: minería de procesos, rastreo distribuido y monitorización.
-Lo usuaria en TA-IND-01 en la sección 4 (Arquitectura del sistema) para argumentar cómo se mapean y comprenden las interacciones reales entre componentes al momento de diagramar la arquitectura.
+  \item[Nota personal:] Me ayuda a entender que la arquitectura se puede ver mientras el sistema se ejecuta, con tres técnicas: minería de procesos, rastreo distribuido y monitorización.
+Lo usuaria en TA-IND-01 en la sección 4 (Arquitectura del sistema) para explicar cómo interactúan los componentes de Netflix.
 \end{description}
